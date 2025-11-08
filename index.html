@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ritmo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>Calculadora de Ritmo</h1>
+
+        <div class="calculator-section">
+            <h2><label for="distance">1. Distancia</label></h2>
+            <div class="preset-group">
+                <label for="preset">Distancias comunes:</label>
+                <select id="preset">
+                    <option value="custom">Personalizada</option>
+                    <option value="42.195">Maratón (42.195 km)</option>
+                    <option value="21.097">Media Maratón (21.097 km)</option>
+                    <option value="10">10 km</option>
+                    <option value="5">5 km</option>
+                    <option value="3">3000m (3 km)</option>
+                    <option value="1.5">1500m (1.5 km)</option>
+                    <option value="0.8">800m (0.8 km)</option>
+                    <option value="0.4">400m (0.4 km)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="number" id="distance" placeholder="0">
+                <span>km</span>
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <h2>2. Tiempo</h2>
+            <div class="time-group">
+                <div class="input-group">
+                    <input type="number" id="time_hh" placeholder="00">
+                    <label for="time_hh">hh</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="time_mm" placeholder="00">
+                    <label for="time_mm">mm</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="time_ss" placeholder="00">
+                    <label for="time_ss">ss</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <h2>3. Ritmo (por km)</h2>
+            <div class="time-group">
+                <div class="input-group">
+                    <input type="number" id="pace_mm" placeholder="00">
+                    <label for="pace_mm">min</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="pace_ss" placeholder="00">
+                    <label for="pace_ss">seg</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="calculate-btn">Calcular</button>
+            <button id="clear-btn">Limpiar</button>
+        </div>
+
+        <div id="splits-results" class="calculator-section">
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

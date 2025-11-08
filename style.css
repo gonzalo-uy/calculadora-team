@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #e74c3c; /* Color de acento */
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.calculator-section {
+    margin-bottom: 25px;
+}
+
+.preset-group {
+    margin-bottom: 15px;
+}
+
+.preset-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Importante para el padding */
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    text-align: right;
+}
+
+/* Grupos de inputs (Distancia, Tiempo, Ritmo) */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group span,
+.input-group label {
+    font-weight: bold;
+    color: #555;
+    flex-shrink: 0; /* Evita que el texto se comprima */
+}
+
+/* Grupo para Tiempo y Ritmo (varios inputs en línea) */
+.time-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+.time-group .input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.time-group .input-group input {
+    text-align: center;
+}
+
+.time-group .input-group label {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    text-transform: uppercase;
+}
+
+
+/* Botones */
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#calculate-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#calculate-btn:hover {
+    background-color: #c0392b;
+}
+
+#clear-btn {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+#clear-btn:hover {
+    background-color: #bdc3c7;
+}
+
+/* --- NUEVOS ESTILOS PARA PARCIALES --- */
+
+#splits-results {
+    margin-top: 20px;
+    margin-bottom: 0; /* El último elemento no necesita margen inferior */
+}
+
+#splits-results h3 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+#splits-results ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    max-height: 250px; /* Límite de altura para que aparezca scroll */
+    overflow-y: auto; /* Scroll vertical si es necesario */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+#splits-results li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+#splits-results li:nth-child(even) {
+     background-color: #f7f7f7;
+}
+
+#splits-results li:last-child {
+    border-bottom: none;
+}
+
+#splits-results li strong {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#splits-results li span {
+    font-weight: bold;
+    color: #333;
+}
